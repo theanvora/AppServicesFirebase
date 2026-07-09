@@ -17,7 +17,7 @@ app depends on the protocols while Firebase stays isolated here.
 ## Installation
 
 ```swift
-.package(url: "https://github.com/anvyxhq/AppServicesFirebase.git", from: "1.0.0")
+.package(url: "https://github.com/anvyxhq/AppServicesFirebase.git", branch: "main")
 ```
 
 Call `FirebaseApp.configure()` at launch and add your `GoogleService-Info.plist`.
@@ -25,8 +25,8 @@ Call `FirebaseApp.configure()` at launch and add your `GoogleService-Info.plist`
 ## Usage
 
 ```swift
-import AppServices
-import AppServicesFirebase
+import AnvyxServiceKit
+import AnvyxServiceFirebaseKit
 
 // App depends on the ports; swap Firebase in at the composition root.
 let analytics: AnalyticsService = CompositeAnalytics([FirebaseAnalyticsService()])
@@ -39,7 +39,7 @@ if config.bool("new_paywall", default: false) { showNewPaywall() }
 
 ## Requirements
 
-- iOS 17.0+ · Swift 5.9+ · Firebase iOS SDK 11+
+- iOS 17+ · Swift 5.9+ · Firebase iOS SDK 11+
 
 ## License
 
